@@ -1,0 +1,1275 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daria Komar — Trenerka Personalna Wrocław | KN Fitness</title>
+<meta name="description" content="Trening personalny 1:1, online i plany treningowe z Darią Komar. KN Fitness, ul. Kazimierza Wielkiego, Wrocław. 5.0 na Google, 8 opinii.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#14161C;
+    --ink-2:#1D2029;
+    --ink-3:#262A36;
+    --paper:#F7F5EF;
+    --paper-2:#ECE9DF;
+    --lime:#C4F135;
+    --lime-dark:#2C3609;
+    --text-dark:#14161C;
+    --muted:#5B5F52;
+    --muted-on-ink:#9A9E8C;
+    --border-l:rgba(20,22,28,0.12);
+    --border-d:rgba(247,245,239,0.14);
+    --radius:14px;
+  }
+  *,*::before,*::after{box-sizing:border-box;}
+  html{scroll-behavior:smooth;max-width:100%;overflow-x:hidden;}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:0.01ms !important; transition-duration:0.01ms !important;}
+  }
+  body{
+    margin:0;
+    max-width:100%;
+    overflow-x:hidden;
+    background:var(--paper);
+    color:var(--text-dark);
+    font-family:'Manrope',sans-serif;
+    font-weight:400;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{
+    font-family:'Unbounded',sans-serif;
+    font-weight:700;
+    margin:0;
+    line-height:1.15;
+  }
+  p{margin:0;}
+  a{color:inherit;text-decoration:none;}
+  ul{margin:0;padding:0;list-style:none;}
+  img{max-width:100%;display:block;}
+  button{font-family:inherit;cursor:pointer;}
+
+  .container{
+    max-width:1200px;
+    margin-inline:auto;
+    padding-left:24px;
+    padding-right:24px;
+  }
+  @media (min-width:600px){
+    .container{padding-left:48px;padding-right:48px;}
+  }
+  @media (min-width:1000px){
+    .container{padding-left:64px;padding-right:64px;}
+  }
+
+  .section{
+    padding-top:64px;
+    padding-bottom:64px;
+  }
+  @media (max-width:599px){
+    .section{padding-top:48px;padding-bottom:48px;}
+  }
+  @media (min-width:1000px){
+    .section{padding-top:96px;padding-bottom:96px;}
+  }
+
+  .eyebrow{
+    display:inline-block;
+    font-family:'Manrope',sans-serif;
+    font-weight:800;
+    font-size:12px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--lime-dark);
+    background:var(--lime);
+    padding:6px 14px;
+    border-radius:999px;
+    margin-bottom:18px;
+  }
+  .eyebrow.on-ink{
+    color:var(--ink);
+    background:var(--lime);
+  }
+
+  h2.section-title{
+    font-size:clamp(1.7rem,4vw,2.6rem);
+    max-width:16ch;
+  }
+  .section-lede{
+    margin-top:16px;
+    max-width:52ch;
+    color:var(--muted);
+    font-size:1.05rem;
+  }
+
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    padding:15px 28px;
+    border-radius:10px;
+    font-weight:800;
+    font-size:15px;
+    border:2px solid transparent;
+    white-space:nowrap;
+    transition:transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .btn-primary{
+    background:var(--lime);
+    color:var(--lime-dark);
+  }
+  @media (hover:hover){
+    .btn-primary:hover{
+      transform:translateY(-2px);
+      box-shadow:0 10px 24px rgba(196,241,53,0.3);
+    }
+  }
+  .cta-pulse{
+    animation:ctaPulse 3.6s ease-in-out infinite;
+  }
+  @keyframes ctaPulse{
+    0%,100%{box-shadow:0 0 0 0 rgba(196,241,53,0.28);}
+    50%{box-shadow:0 0 0 7px rgba(196,241,53,0);}
+  }
+  @media (prefers-reduced-motion: reduce){
+    .cta-pulse{animation:none;}
+  }
+  .btn-secondary{
+    background:transparent;
+    border-color:currentColor;
+    color:inherit;
+  }
+  .btn svg{width:18px;height:18px;flex-shrink:0;}
+
+  /* ===== SCROLL REVEAL ===== */
+  .reveal{
+    opacity:0;
+    transform:translateY(28px);
+    transition:opacity 0.7s cubic-bezier(0.2,0.7,0.2,1), transform 0.7s cubic-bezier(0.2,0.7,0.2,1);
+    will-change:opacity, transform;
+  }
+  .reveal.is-visible{
+    opacity:1;
+    transform:translateY(0);
+  }
+  @media (prefers-reduced-motion: reduce){
+    .reveal{opacity:1;transform:none;transition:none;}
+  }
+
+  /* ===== PRELOADER ===== */
+  #preloader{
+    position:fixed;
+    inset:0;
+    z-index:999;
+    background:var(--ink);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition:opacity 0.5s ease, visibility 0.5s ease;
+  }
+  #preloader.hide{
+    opacity:0;
+    visibility:hidden;
+    pointer-events:none;
+  }
+  .preloader-inner{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:14px;
+  }
+  .preloader-inner span{
+    font-family:'Unbounded',sans-serif;
+    font-weight:800;
+    font-size:1.3rem;
+    letter-spacing:0.03em;
+    color:var(--paper);
+  }
+  .preloader-inner span em{
+    font-style:normal;
+    color:var(--lime);
+  }
+  .preloader-bar{
+    width:120px;
+    height:3px;
+    background:rgba(247,245,239,0.15);
+    border-radius:999px;
+    overflow:hidden;
+    position:relative;
+  }
+  .preloader-bar::after{
+    content:"";
+    position:absolute;
+    left:0;
+    top:0;
+    height:100%;
+    width:0%;
+    background:var(--lime);
+    animation:preloaderFill 0.8s ease forwards;
+  }
+  @keyframes preloaderFill{
+    from{width:0%;}
+    to{width:100%;}
+  }
+  @media (prefers-reduced-motion: reduce){
+    .preloader-bar::after{animation:none;width:100%;}
+  }
+
+  /* ===== NAV ===== */
+  header.site-nav{
+    position:sticky;
+    top:0;
+    z-index:100;
+    background:var(--ink);
+    border-bottom:1px solid var(--border-d);
+  }
+  .nav-row{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding-top:16px;
+    padding-bottom:16px;
+    color:var(--paper);
+  }
+  .logo{
+    font-family:'Unbounded',sans-serif;
+    font-weight:800;
+    font-size:15px;
+    letter-spacing:0.02em;
+    color:var(--paper);
+  }
+  .logo span{color:var(--lime);}
+  .nav-links{
+    display:none;
+    align-items:center;
+    gap:32px;
+    font-weight:600;
+    font-size:14px;
+  }
+  .nav-links a:hover{color:var(--lime);}
+  .nav-phone{
+    display:none;
+    align-items:center;
+    gap:8px;
+    background:var(--lime);
+    color:var(--lime-dark);
+    font-weight:800;
+    font-size:14px;
+    padding:10px 18px;
+    border-radius:999px;
+    white-space:nowrap;
+    flex-shrink:0;
+  }
+  .nav-phone svg{
+    width:16px;
+    height:16px;
+    flex-shrink:0;
+  }
+  .nav-burger{
+    display:flex;
+    background:none;
+    border:none;
+    color:var(--paper);
+    padding:6px;
+  }
+  .nav-burger svg{width:26px;height:26px;}
+  @media (min-width:1040px){
+    .nav-links{display:flex;}
+    .nav-phone{display:inline-flex;}
+    .nav-burger{display:none;}
+  }
+  #mobile-menu{
+    display:none;
+    flex-direction:column;
+    gap:2px;
+    padding-bottom:20px;
+  }
+  #mobile-menu.open{display:flex;}
+  #mobile-menu a{
+    color:var(--paper);
+    font-weight:600;
+    padding:12px 0;
+    border-top:1px solid var(--border-d);
+  }
+  #mobile-menu .btn{margin-top:14px;width:100%;}
+
+  /* ===== HERO ===== */
+  .hero{
+    position:relative;
+    background:var(--ink);
+    color:var(--paper);
+    min-height:calc(100svh - 64px);
+    display:flex;
+    align-items:flex-end;
+    overflow:hidden;
+  }
+  .hero-bg{
+    position:absolute;
+    inset:0;
+    background-image:url('https://images.unsplash.com/photo-1514994667787-b48ca37155f0?auto=format&fit=crop&w=1600&q=75');
+    background-size:cover;
+    background-position:center 22%;
+  }
+  .hero-bg::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(180deg, rgba(20,22,28,0.35) 0%, rgba(20,22,28,0.55) 45%, rgba(20,22,28,0.94) 100%);
+  }
+  .hero-content{
+    position:relative;
+    z-index:2;
+    padding-top:64px;
+    padding-bottom:40px;
+    width:100%;
+  }
+  @media (min-width:1000px){
+    .hero-content{padding-bottom:72px;}
+  }
+  .hero-badge{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    background:rgba(247,245,239,0.1);
+    border:1px solid var(--border-d);
+    padding:7px 14px;
+    border-radius:999px;
+    font-size:13px;
+    font-weight:600;
+    margin-bottom:20px;
+  }
+  .hero-badge svg{width:14px;height:14px;color:var(--lime);}
+  .hero h1{
+    font-size:clamp(2.1rem,6.5vw,3.9rem);
+    max-width:14ch;
+    line-height:1.08;
+  }
+  .hero h1 em{
+    font-style:normal;
+    color:var(--lime);
+  }
+  .accent-underline{
+    position:relative;
+    display:inline-block;
+  }
+  .underline-svg{
+    position:absolute;
+    left:-2%;
+    bottom:-0.22em;
+    width:111%;
+    height:0.3em;
+    overflow:visible;
+    pointer-events:none;
+    transform:scaleY(-1);
+  }
+  .underline-svg path{
+    fill:none;
+    stroke:var(--lime);
+    stroke-width:5;
+    stroke-linecap:round;
+    stroke-dasharray:1000;
+    stroke-dashoffset:1000;
+    animation:underlineDraw 0.9s cubic-bezier(0.2,0.7,0.2,1) forwards;
+    animation-delay:1.3s;
+  }
+  @keyframes underlineDraw{
+    to{stroke-dashoffset:0;}
+  }
+  @media (prefers-reduced-motion: reduce){
+    .underline-svg path{animation:none;stroke-dashoffset:0;}
+  }
+  .hero-sub{
+    margin-top:20px;
+    max-width:42ch;
+    font-size:1.05rem;
+    color:#D7D5CB;
+  }
+  .hero-ctas{
+    margin-top:32px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:14px;
+  }
+  .hero-ctas .btn-secondary{color:var(--paper);}
+
+  /* ===== PAIN ===== */
+  .pain-grid{
+    margin-top:40px;
+    display:grid;
+    grid-template-columns:1fr;
+    gap:16px;
+  }
+  @media (min-width:640px){
+    .pain-grid{grid-template-columns:repeat(2,1fr);}
+  }
+  .pain-card{
+    background:var(--paper);
+    border:1px solid var(--border-l);
+    border-radius:var(--radius);
+    padding-top:24px;
+    padding-bottom:24px;
+    padding-inline:24px;
+  }
+  .pain-icon{
+    width:40px;
+    height:40px;
+    border-radius:10px;
+    background:var(--ink);
+    color:var(--lime);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-bottom:16px;
+  }
+  .pain-icon svg{width:20px;height:20px;}
+  .pain-card h3{
+    font-size:1.05rem;
+    font-weight:700;
+    margin-bottom:8px;
+  }
+  .pain-card p{color:var(--muted);font-size:0.95rem;}
+
+  /* ===== O MNIE ===== */
+  .about{background:var(--paper-2);}
+  .about-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:40px;
+    align-items:center;
+  }
+  @media (min-width:900px){
+    .about-grid{grid-template-columns:0.85fr 1.15fr;gap:64px;}
+  }
+  .about-img{
+    border-radius:var(--radius);
+    overflow:hidden;
+    aspect-ratio:4/5;
+  }
+  .about-img img{width:100%;height:100%;object-fit:cover;}
+  .cert-list{
+    margin-top:24px;
+    display:grid;
+    grid-template-columns:1fr;
+    gap:10px;
+  }
+  @media (min-width:500px){
+    .cert-list{grid-template-columns:1fr 1fr;}
+  }
+  .cert-item{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    background:var(--paper);
+    border:1px solid var(--border-l);
+    border-radius:10px;
+    padding-top:12px;
+    padding-bottom:12px;
+    padding-inline:14px;
+    font-size:14px;
+    font-weight:600;
+  }
+  .cert-item svg{width:18px;height:18px;color:var(--lime-dark);flex-shrink:0;}
+  .about-text p + p{margin-top:14px;}
+  .about-text .muted{color:var(--muted);}
+
+  /* ===== OFERTA ===== */
+  .offer{background:var(--ink);color:var(--paper);}
+  .offer .section-lede{color:var(--muted-on-ink);}
+  .offer-grid{
+    margin-top:40px;
+    display:grid;
+    grid-template-columns:1fr;
+    gap:20px;
+  }
+  @media (min-width:900px){
+    .offer-grid{grid-template-columns:repeat(3,1fr);}
+  }
+  .offer-card{
+    background:var(--ink-2);
+    border:1px solid var(--border-d);
+    border-radius:var(--radius);
+    padding-top:28px;
+    padding-bottom:28px;
+    padding-inline:24px;
+    display:flex;
+    flex-direction:column;
+  }
+  .offer-card.is-featured{
+    border-color:var(--lime);
+    background:var(--ink-3);
+  }
+  .offer-tag{
+    font-size:12px;
+    font-weight:800;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    color:var(--lime);
+    margin-bottom:10px;
+  }
+  .offer-card h3{font-size:1.3rem;margin-bottom:6px;}
+  .offer-price{
+    font-family:'Unbounded',sans-serif;
+    font-weight:700;
+    font-size:1.6rem;
+    margin:14px 0 16px;
+  }
+  .offer-price span{
+    font-family:'Manrope',sans-serif;
+    font-weight:600;
+    font-size:0.85rem;
+    color:var(--muted-on-ink);
+  }
+  .offer-features{margin-bottom:24px;flex-grow:1;}
+  .offer-features li{
+    display:flex;
+    gap:10px;
+    align-items:flex-start;
+    font-size:14px;
+    color:#D7D5CB;
+    padding-block:6px;
+  }
+  .offer-features svg{width:16px;height:16px;color:var(--lime);flex-shrink:0;margin-top:3px;}
+  .offer-card .btn{width:100%;}
+
+  /* ===== KALKULATOR ===== */
+  .calc-wrap{
+    width:85%;
+    max-width:85%;
+    margin-top:40px;
+    margin-left:-24px;
+    margin-right:0;
+    background:var(--ink);
+    border-radius:var(--radius);
+    padding-top:32px;
+    padding-bottom:32px;
+    padding-inline:24px;
+    color:var(--paper);
+  }
+  @media (min-width:700px){
+    .calc-wrap{padding-inline:48px;}
+  }
+  .calc-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:32px;
+    width:90%;
+    margin-inline:auto;
+  }
+  @media (min-width:800px){
+    .calc-grid{grid-template-columns:1fr 1fr;gap:48px;}
+  }
+  .field{margin-bottom:12px;}
+  .field label{
+    display:block;
+    font-size:13px;
+    font-weight:700;
+    margin-bottom:6px;
+    color:var(--muted-on-ink);
+  }
+  .field input,.field select{
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+    color-scheme:dark;
+    width:100%;
+    background-color:var(--ink-2);
+    border:1px solid var(--border-d);
+    color:var(--paper);
+    padding:12px 14px;
+    border-radius:8px;
+    font-size:15px;
+    font-family:inherit;
+  }
+  .field select{
+    background-image:url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23F7F5EF' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat:no-repeat;
+    background-position:right 14px center;
+    background-size:16px;
+    padding-right:40px;
+  }
+  .field input:focus,.field select:focus{
+    outline:2px solid var(--lime);
+    outline-offset:1px;
+  }
+  .field-row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+  }
+  .calc-result{
+    background:var(--ink-2);
+    border:1px solid rgba(196,241,53,0.3);
+    box-shadow:0 0 0 1px rgba(196,241,53,0.06), 0 12px 28px rgba(0,0,0,0.25);
+    border-radius:var(--radius);
+    padding-top:24px;
+    padding-bottom:24px;
+    padding-inline:24px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+  }
+  .calc-result-label{font-size:13px;color:var(--muted-on-ink);font-weight:700;}
+  .calc-result-value{
+    font-family:'Unbounded',sans-serif;
+    font-size:clamp(2.2rem,6vw,3rem);
+    color:var(--lime);
+    margin-top:4px;
+  }
+  .calc-result-value span{margin-left:8px;font-size:1.1rem;font-family:'Manrope',sans-serif;font-weight:700;color:var(--paper);}
+  .calc-submeta{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+    margin-top:20px;
+    padding-top:20px;
+    border-top:1px solid var(--border-d);
+  }
+  .calc-submeta div{text-align:center;}
+  .calc-submeta strong{display:block;font-family:'Unbounded',sans-serif;font-size:1.1rem;margin-top:2px;}
+  .calc-submeta small{font-size:12px;color:rgba(247,245,239,0.65);}
+  .calc-cta{margin-top:24px;}
+  .calc-cta .btn{width:100%;}
+
+  /* ===== METAMORFOZY ===== */
+  .meta-grid{
+    margin-top:40px;
+    display:grid;
+    grid-template-columns:1fr;
+    gap:20px;
+  }
+  @media (min-width:640px){
+    .meta-grid{grid-template-columns:repeat(2,1fr);}
+  }
+  @media (min-width:1000px){
+    .meta-grid{grid-template-columns:repeat(3,1fr);}
+  }
+  .meta-card{
+    border:1px solid var(--border-l);
+    border-radius:var(--radius);
+    overflow:hidden;
+    background:var(--paper);
+  }
+  .meta-split{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    height:180px;
+  }
+  .meta-block{
+    display:flex;
+    align-items:flex-end;
+    padding:12px;
+    font-family:'Unbounded',sans-serif;
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:0.06em;
+    color:var(--paper);
+  }
+  .meta-block.przed{background:linear-gradient(160deg,#2A2D22,#3A3E2C);}
+  .meta-block.po{background:linear-gradient(160deg,#54611A,#8AA82B);}
+  .meta-info{padding-top:16px;padding-bottom:16px;padding-inline:18px;}
+  .meta-info h3{font-size:1rem;margin-bottom:4px;}
+  .meta-info p{color:var(--muted);font-size:0.9rem;}
+  .meta-note{
+    margin-top:20px;
+    font-size:13px;
+    color:var(--muted);
+  }
+
+  /* ===== OPINIE ===== */
+  .reviews{background:var(--paper-2);}
+  .rating-badge{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    background:var(--paper);
+    border:1px solid var(--border-l);
+    border-radius:999px;
+    padding:10px 18px;
+    margin-bottom:32px;
+    font-weight:700;
+    font-size:14px;
+  }
+  .rating-badge .stars{display:flex;gap:2px;color:var(--lime-dark);}
+  .rating-badge .stars svg{width:15px;height:15px;}
+  .review-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:16px;
+  }
+  @media (min-width:700px){
+    .review-grid{grid-template-columns:repeat(2,1fr);}
+  }
+  .review-card{
+    background:var(--paper);
+    border:1px solid var(--border-l);
+    border-radius:var(--radius);
+    padding-top:22px;
+    padding-bottom:22px;
+    padding-inline:22px;
+  }
+  .review-card .stars{display:flex;gap:2px;color:var(--lime-dark);margin-bottom:12px;}
+  .review-card .stars svg{width:14px;height:14px;}
+  .review-card p.quote{font-size:0.95rem;}
+  .review-author{
+    margin-top:14px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:13px;
+    font-weight:700;
+    color:var(--muted);
+  }
+  .review-author .avatar{
+    width:30px;height:30px;border-radius:50%;
+    background:var(--ink);color:var(--lime);
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Unbounded',sans-serif;font-size:12px;
+  }
+
+  /* ===== FAQ ===== */
+  .faq-list{margin-top:32px;max-width:760px;margin-inline:auto;}
+  #faq .container{max-width:760px;margin-inline:auto;text-align:center;}
+  #faq .section-title{margin-inline:auto;}
+  #faq .faq-item summary{text-align:left;}
+  #faq .faq-a{text-align:left;}
+  .faq-item{
+    border-bottom:1px solid var(--border-l);
+  }
+  .faq-item summary{
+    list-style:none;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:16px;
+    padding-top:20px;
+    padding-bottom:20px;
+    font-weight:700;
+    font-size:1rem;
+  }
+  .faq-item summary::-webkit-details-marker{display:none;}
+  .faq-item summary .plus{
+    flex-shrink:0;
+    width:24px;height:24px;
+    border-radius:50%;
+    border:1.5px solid var(--text-dark);
+    display:flex;align-items:center;justify-content:center;
+    position:relative;
+  }
+  .faq-item summary .plus svg{width:12px;height:12px;transition:transform 0.2s;}
+  .faq-item[open] summary .plus svg{transform:rotate(45deg);}
+  .faq-item .faq-a{
+    padding-bottom:20px;
+    color:var(--muted);
+    font-size:0.95rem;
+    max-width:65ch;
+  }
+
+  /* ===== KONTAKT ===== */
+  .contact{background:var(--ink);color:var(--paper);}
+  .contact-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:40px;
+  }
+  @media (min-width:900px){
+    .contact-grid{grid-template-columns:1.1fr 0.9fr;}
+  }
+  .contact-ctas{
+    margin-top:28px;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    max-width:360px;
+  }
+  .contact-ctas .btn{width:100%;font-size:17px;padding:18px 24px;}
+  .contact-info{
+    background:var(--ink-2);
+    border:1px solid var(--border-d);
+    border-radius:var(--radius);
+    padding-top:24px;
+    padding-bottom:24px;
+    padding-inline:24px;
+  }
+  .contact-info dt{font-size:12px;font-weight:700;color:var(--muted-on-ink);text-transform:uppercase;letter-spacing:0.06em;}
+  .contact-info dd{margin:4px 0 18px;font-size:15px;font-weight:600;}
+  .contact-info dd:last-child{margin-bottom:0;}
+  .contact-info a.map-link{color:var(--lime);font-weight:700;}
+
+  footer{
+    background:var(--ink);
+    border-top:1px solid var(--border-d);
+    color:var(--muted-on-ink);
+    font-size:12.5px;
+    padding-top:24px;
+    padding-bottom:24px;
+  }
+  .footer-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    justify-content:space-between;
+    align-items:center;
+  }
+</style>
+<noscript><style>#preloader{display:none;}</style></noscript>
+</head>
+<body>
+
+<div id="preloader" role="presentation">
+  <div class="preloader-inner">
+    <span>DARIA <em>KOMAR</em></span>
+    <div class="preloader-bar"></div>
+  </div>
+</div>
+
+
+<header class="site-nav">
+  <div class="container nav-row">
+    <a href="#hero" class="logo">DARIA <span>KOMAR</span></a>
+    <nav class="nav-links">
+      <a href="#oferta">Oferta</a>
+      <a href="#o-mnie">O mnie</a>
+      <a href="#metamorfozy">Metamorfozy</a>
+      <a href="#opinie">Opinie</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <a href="tel:+48784335890" class="nav-phone">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.33 1.79.63 2.65a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.43-1.43a2 2 0 0 1 2.11-.45c.86.3 1.75.51 2.65.63A2 2 0 0 1 22 16.92z"/></svg>
+      784 335 890
+    </a>
+    <button class="nav-burger" id="burger-btn" aria-label="Otwórz menu" aria-expanded="false" aria-controls="mobile-menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+  <div class="container" id="mobile-menu">
+    <a href="#oferta">Oferta</a>
+    <a href="#o-mnie">O mnie</a>
+    <a href="#metamorfozy">Metamorfozy</a>
+    <a href="#opinie">Opinie</a>
+    <a href="#kontakt">Kontakt</a>
+    <a href="tel:+48784335890" class="btn btn-primary">Zadzwoń: 784 335 890</a>
+  </div>
+</header>
+
+<section class="hero" id="hero">
+  <div class="hero-bg" role="img" aria-label="Kobieta trenująca z liną, zdjęcie placeholder"></div>
+  <div class="container hero-content">
+    <div class="hero-badge">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l7.1-1.01L12 2z"/></svg>
+      5.0 na Google · 8 opinii · KN Fitness Wrocław
+    </div>
+    <h1>Nie kolejny plan.<br><em>Wspólny</em> <span class="accent-underline">sukces<svg class="underline-svg" viewBox="0 0 200 20" preserveAspectRatio="none" aria-hidden="true"><path d="M3,7 Q55,19 197,9"/></svg></span>.</h1>
+    <p class="hero-sub">Trening 1:1 i online dopasowany do Twojego ciała, kalendarza i cierpliwości — nie odwrotnie. Bez wstydu, bez oceniania, z kimś kto pilnuje Twojego tempa.</p>
+    <div class="hero-ctas">
+      <a href="tel:+48784335890" class="btn btn-primary cta-pulse">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.33 1.79.63 2.65a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.43-1.43a2 2 0 0 1 2.11-.45c.86.3 1.75.51 2.65.63A2 2 0 0 1 22 16.92z"/></svg>
+        Zadzwoń: 784 335 890
+      </a>
+      <a href="https://wa.me/48784335890" class="btn btn-secondary" target="_blank" rel="noopener">Napisz na WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<section class="section pain" id="pain">
+  <div class="container">
+    <span class="eyebrow">Rozpoznajesz siebie?</span>
+    <h2 class="section-title">Zanim zaczniemy — sprawdźmy, czy trafiłaś we właściwe miejsce</h2>
+    <div class="pain-grid">
+      <div class="pain-card reveal">
+        <div class="pain-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 8v4l3 3M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"/></svg></div>
+        <h3>Motywacja gaśnie po tygodniu</h3>
+        <p>Zaczynasz w poniedziałek pełna zapału, w środę już nie masz siły. Sama dyscyplina to za mało — potrzebujesz kogoś, kto trzyma Cię za słowo.</p>
+      </div>
+      <div class="pain-card reveal">
+        <div class="pain-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg></div>
+        <h3>Siłownia Cię przytłacza</h3>
+        <p>Rzędy maszyn, nikt nie tłumaczy techniki, czujesz się obserwowana. Nie wiesz od czego zacząć — i to Cię blokuje jeszcze przed pierwszym treningiem.</p>
+      </div>
+      <div class="pain-card reveal">
+        <div class="pain-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 1l4 4-4 4M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4M21 13v2a4 4 0 0 1-4 4H3"/></svg></div>
+        <h3>Efekt jojo po każdej diecie</h3>
+        <p>Testowałaś diety, które dawały wynik na chwilę. Bez planu treningowego i realistycznego podejścia waga zawsze wraca — i to szybciej niż spadła.</p>
+      </div>
+      <div class="pain-card reveal">
+        <div class="pain-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4.5 8-11.8A8 8 0 0 0 4 10.2C4 17.5 12 22 12 22z"/></svg></div>
+        <h3>Boisz się kontuzji</h3>
+        <p>Chcesz efektów, ale bez przetrenowania i bólu pleców następnego dnia. Potrzebujesz planu dopasowanego do Twojego ciała, nie kopii z internetu.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section about" id="o-mnie">
+  <div class="container about-grid">
+    <div class="about-img reveal">
+      <img src="https://images.unsplash.com/photo-1434754205268-ad3b5f549b11?auto=format&fit=crop&w=900&q=75" alt="Daria Komar podczas treningu — zdjęcie placeholder do podmiany">
+    </div>
+    <div class="about-text reveal">
+      <span class="eyebrow">O mnie</span>
+      <h2 class="section-title">Daria Komar — trenerka, która trenuje ludzi, nie tylko mięśnie</h2>
+      <p class="muted" style="margin-top:16px;">Od lat pracuję z kobietami, które słyszały już zbyt wiele planów „uniwersalnych" i za każdym razem kończyło się tak samo. Moje podejście jest inne: najpierw rozmowa o Twoim ciele, kalendarzu i ograniczeniach — dopiero potem plan.</p>
+      <p class="muted">Nie oceniam poziomu zaawansowania. Pracuję zarówno z osobami, które nigdy nie były na siłowni, jak i z tymi, które wracają po przerwie lub kontuzji.</p>
+      <div class="cert-list">
+        <div class="cert-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Trener personalny kl. II</div>
+        <div class="cert-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Instruktor fitness</div>
+        <div class="cert-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Trening funkcjonalny</div>
+        <div class="cert-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>5+ lat doświadczenia</div>
+      </div>
+      <!-- PLACEHOLDER: certyfikaty do potwierdzenia i podmiany przez klientkę -->
+    </div>
+  </div>
+</section>
+
+<section class="section offer" id="oferta">
+  <div class="container">
+    <span class="eyebrow on-ink">Oferta</span>
+    <h2 class="section-title">Wybierz formę, która pasuje do Twojego życia</h2>
+    <p class="section-lede">Każda opcja zaczyna się od rozmowy — nie od razu od planu. Ceny orientacyjne, ustalane indywidualnie po pierwszej konsultacji.</p>
+    <div class="offer-grid">
+      <div class="offer-card reveal">
+        <div class="offer-tag">Stacjonarnie</div>
+        <h3>Trening 1:1</h3>
+        <div class="offer-price">od 180 zł <span>/ sesja</span></div>
+        <ul class="offer-features">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Pełna uwaga trenerki przez cały trening</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Korekta techniki na żywo</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>KN Fitness, ul. Kazimierza Wielkiego</li>
+        </ul>
+        <a href="tel:+48784335890" class="btn btn-secondary" style="color:var(--paper);">Zapytaj o termin</a>
+      </div>
+      <div class="offer-card is-featured reveal">
+        <div class="offer-tag">Najczęściej wybierane</div>
+        <h3>Trening online</h3>
+        <div class="offer-price">od 90 zł <span>/ sesja</span></div>
+        <ul class="offer-features">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Trenujesz gdziekolwiek jesteś</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Kontakt na bieżąco między sesjami</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Bez sprzętu lub z minimalnym</li>
+        </ul>
+        <a href="tel:+48784335890" class="btn btn-primary">Zapytaj o termin</a>
+      </div>
+      <div class="offer-card reveal">
+        <div class="offer-tag">Samodzielnie</div>
+        <h3>Plan treningowy</h3>
+        <div class="offer-price">od 250 zł <span>/ plan</span></div>
+        <ul class="offer-features">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Indywidualny plan na 4–8 tygodni</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Dopasowany do sprzętu, jaki masz</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Jedna korekta w trakcie realizacji</li>
+        </ul>
+        <a href="tel:+48784335890" class="btn btn-secondary" style="color:var(--paper);">Zapytaj o termin</a>
+      </div>
+      <!-- PLACEHOLDER: ceny orientacyjne do potwierdzenia przez klientkę -->
+    </div>
+
+    <div class="calc-wrap reveal">
+      <span class="eyebrow on-ink">Narzędzie</span>
+      <h2 class="section-title" style="font-size:clamp(1.4rem,3vw,1.9rem);">Ile kalorii faktycznie potrzebujesz?</h2>
+      <p class="section-lede" style="margin-bottom:8px;">Policz swoje zapotrzebowanie (TDEE) — a potem porozmawiajmy, co zrobić z tym wynikiem.</p>
+      <div class="calc-grid" style="margin-top:24px;">
+        <div>
+          <div class="field-row">
+            <div class="field">
+              <label for="calc-plec">Płeć</label>
+              <select id="calc-plec">
+                <option value="k">Kobieta</option>
+                <option value="m">Mężczyzna</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="calc-wiek">Wiek</label>
+              <input type="number" id="calc-wiek" value="30" min="14" max="90">
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="calc-waga">Waga (kg)</label>
+              <input type="number" id="calc-waga" value="65" min="35" max="200">
+            </div>
+            <div class="field">
+              <label for="calc-wzrost">Wzrost (cm)</label>
+              <input type="number" id="calc-wzrost" value="165" min="130" max="220">
+            </div>
+          </div>
+          <div class="field">
+            <label for="calc-aktywnosc">Poziom aktywności</label>
+            <select id="calc-aktywnosc">
+              <option value="1.2">Siedzący tryb życia</option>
+              <option value="1.375">Lekka aktywność (1-3x/tydz.)</option>
+              <option value="1.55" selected>Umiarkowana (3-5x/tydz.)</option>
+              <option value="1.725">Wysoka (6-7x/tydz.)</option>
+              <option value="1.9">Bardzo wysoka / praca fizyczna</option>
+            </select>
+          </div>
+        </div>
+        <div class="calc-result">
+          <div class="calc-result-label">Twoje szacowane zapotrzebowanie (TDEE)</div>
+          <div class="calc-result-value" id="calc-tdee">2100 <span>kcal / dzień</span></div>
+          <div class="calc-submeta">
+            <div>
+              <small>Redukcja</small>
+              <strong id="calc-redukcja">1600</strong>
+            </div>
+            <div>
+              <small>Budowa masy</small>
+              <strong id="calc-masa">2400</strong>
+            </div>
+          </div>
+          <div class="calc-cta">
+            <a href="tel:+48784335890" class="btn btn-primary">Napisz co z tym wynikiem zrobić</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="metamorfozy">
+  <div class="container">
+    <span class="eyebrow">Efekty</span>
+    <h2 class="section-title">Metamorfozy klientek</h2>
+    <p class="section-lede">Bloki przed/po to placeholdery — miejsce na prawdziwe zdjęcia klientek (za ich zgodą) trafi tu przy wdrożeniu.</p>
+    <div class="meta-grid">
+      <div class="meta-card reveal">
+        <div class="meta-split">
+          <div class="meta-block przed">PRZED</div>
+          <div class="meta-block po">PO</div>
+        </div>
+        <div class="meta-info">
+          <h3>Klientka A.</h3>
+          <p>12 tygodni treningu 1:1 · -6 kg, więcej energii w ciągu dnia</p>
+        </div>
+      </div>
+      <div class="meta-card reveal">
+        <div class="meta-split">
+          <div class="meta-block przed">PRZED</div>
+          <div class="meta-block po">PO</div>
+        </div>
+        <div class="meta-info">
+          <h3>Klientka M.</h3>
+          <p>16 tygodni planu online · powrót do formy po ciąży</p>
+        </div>
+      </div>
+      <div class="meta-card reveal">
+        <div class="meta-split">
+          <div class="meta-block przed">PRZED</div>
+          <div class="meta-block po">PO</div>
+        </div>
+        <div class="meta-info">
+          <h3>Klientka J.</h3>
+          <p>10 tygodni treningu 1:1 · koniec bólu pleców, lepsza postawa</p>
+        </div>
+      </div>
+    </div>
+    <p class="meta-note">* wyniki placeholder, do podmiany na prawdziwe historie klientek za ich zgodą</p>
+  </div>
+</section>
+
+<section class="section reviews" id="opinie">
+  <div class="container">
+    <span class="eyebrow">Opinie</span>
+    <h2 class="section-title">Co mówią klientki</h2>
+    <div class="rating-badge">
+      <span class="stars">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l7.1-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l7.1-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l7.1-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l7.1-1.01L12 2z"/></svg>
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l7.1-1.01L12 2z"/></svg>
+      </span>
+      5.0 na Google · 8 opinii
+    </div>
+    <div class="review-grid">
+      <div class="review-card reveal">
+        <div class="stars">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l7.1-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l7.1-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l7.1-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l7.1-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l7.1-1.01L12 2z"/></svg>
+        </div>
+        <p class="quote">„Pierwszy raz trener faktycznie słuchał, co mówię o swoim ciele, zamiast dawać gotowy plan z internetu."</p>
+        <div class="review-author"><span class="avatar">JK</span> Justyna K.</div>
+      </div>
+      <div class="review-card reveal">
+        <div class="stars">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l7.1-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l7.1-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l7.1-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l7.1-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l7.1-1.01L12 2z"/></svg>
+        </div>
+        <p class="quote">„Treningi online z Darią to było dokładnie to czego potrzebowałam — elastyczność bez utraty jakości."</p>
+        <div class="review-author"><span class="avatar">OW</span> Ola W.</div>
+      </div>
+      <div class="review-card reveal">
+        <div class="stars">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l7.1-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l7.1-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l7.1-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l7.1-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l7.1-1.01L12 2z"/></svg>
+        </div>
+        <p class="quote">„Wróciłam do formy po kontuzji kolana. Daria dopasowała ćwiczenia tak, żebym nigdy nie czuła się zagrożona."</p>
+        <div class="review-author"><span class="avatar">AM</span> Agata M.</div>
+      </div>
+      <div class="review-card reveal">
+        <div class="stars">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l7.1-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l7.1-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l7.1-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l7.1-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l7.1-1.01L12 2z"/></svg>
+        </div>
+        <p class="quote">„Kalkulator na stronie pomógł mi zrozumieć, dlaczego moje wcześniejsze diety nie działały. Polecam każdej."</p>
+        <div class="review-author"><span class="avatar">KP</span> Kasia P.</div>
+      </div>
+      <!-- PLACEHOLDER: opinie do podmiany na prawdziwe cytaty z Google (8 opinii, 5.0) -->
+    </div>
+  </div>
+</section>
+
+<section class="section" id="faq">
+  <div class="container">
+    <span class="eyebrow">FAQ</span>
+    <h2 class="section-title">Najczęstsze pytania</h2>
+    <div class="faq-list reveal">
+      <details class="faq-item" open>
+        <summary>Czy trening jest dla początkujących?<span class="plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+        <div class="faq-a">Tak — większość moich klientek zaczynała od zera. Pierwsze sesje to nauka podstawowych wzorców ruchowych, bez pośpiechu i presji.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Ile trwa jedna sesja?<span class="plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+        <div class="faq-a">Standardowo 55–60 minut, zarówno stacjonarnie jak i online. Dokładny czas ustalamy indywidualnie na pierwszej konsultacji.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Czy mogę trenować online jeśli nie mam sprzętu?<span class="plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+        <div class="faq-a">Tak. Pierwsze plany online układam pod sprzęt, który faktycznie masz w domu — nawet jeśli to tylko mata i własna masa ciała.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Co jeśli mam kontuzję lub ograniczenia zdrowotne?<span class="plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+        <div class="faq-a">Zgłoś to przy pierwszym kontakcie. Dostosowuję plan tak, aby trenować bezpiecznie wokół ograniczenia, a nie mimo niego — w razie potrzeby zalecam konsultację z fizjoterapeutą.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Jak wygląda pierwsze spotkanie?<span class="plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></span></summary>
+        <div class="faq-a">Krótka rozmowa o Twoich celach, historii treningowej i ograniczeniach, a potem pierwszy trening próbny — żebyś zobaczyła, jak wygląda współpraca, zanim się zdecydujesz.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="section contact" id="kontakt">
+  <div class="container contact-grid">
+    <div>
+      <span class="eyebrow on-ink">Kontakt</span>
+      <h2 class="section-title">Zrób pierwszy krok — reszta jest już prostsza</h2>
+      <p class="section-lede">Zadzwoń lub napisz na WhatsApp. Odpowiadam zwykle tego samego dnia.</p>
+      <div class="contact-ctas reveal">
+        <a href="tel:+48784335890" class="btn btn-primary cta-pulse">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.33 1.79.63 2.65a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.43-1.43a2 2 0 0 1 2.11-.45c.86.3 1.75.51 2.65.63A2 2 0 0 1 22 16.92z"/></svg>
+          Zadzwoń: 784 335 890
+        </a>
+        <a href="https://wa.me/48784335890" class="btn btn-secondary" target="_blank" rel="noopener">Napisz na WhatsApp</a>
+      </div>
+    </div>
+    <dl class="contact-info reveal">
+      <dt>Studio</dt>
+      <dd>KN Fitness</dd>
+      <dt>Adres</dt>
+      <dd>ul. Kazimierza Wielkiego, Wrocław</dd>
+      <dt>Telefon</dt>
+      <dd>784 335 890</dd>
+      <dt>Znajdź nas</dt>
+      <dd><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=KN+Fitness+Wroc%C5%82aw+Kazimierza+Wielkiego" target="_blank" rel="noopener">Zobacz na Google Maps →</a></dd>
+    </dl>
+  </div>
+</section>
+
+<footer>
+  <div class="container footer-row">
+    <span>© <span id="year"></span> Daria Komar · KN Fitness Wrocław</span>
+    <span>Mockup sprzedażowy — dane placeholder do podmiany przez klientkę</span>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    const preloader = document.getElementById('preloader');
+    let hidden = false;
+    function hidePreloader(){
+      if (hidden) return;
+      hidden = true;
+      preloader.classList.add('hide');
+      document.body.style.overflow = '';
+    }
+    document.body.style.overflow = 'hidden';
+    window.addEventListener('load', () => setTimeout(hidePreloader, 500));
+    setTimeout(hidePreloader, 2500); // zabezpieczenie na wypadek wolnego łącza
+  })();
+
+  (function(){
+    const revealEls = document.querySelectorAll('.reveal');
+    revealEls.forEach(el => {
+      const siblings = Array.from(el.parentElement.children).filter(c => c.classList.contains('reveal'));
+      const idx = siblings.indexOf(el);
+      el.style.transitionDelay = Math.min(idx * 90, 320) + 'ms';
+    });
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -8% 0px' });
+    revealEls.forEach(el => observer.observe(el));
+  })();
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const burgerBtn = document.getElementById('burger-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  burgerBtn.addEventListener('click', () => {
+    const isOpen = mobileMenu.classList.toggle('open');
+    burgerBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+  mobileMenu.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+      burgerBtn.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  function calcTDEE(){
+    const plec = document.getElementById('calc-plec').value;
+    const wiek = parseFloat(document.getElementById('calc-wiek').value) || 0;
+    const waga = parseFloat(document.getElementById('calc-waga').value) || 0;
+    const wzrost = parseFloat(document.getElementById('calc-wzrost').value) || 0;
+    const aktywnosc = parseFloat(document.getElementById('calc-aktywnosc').value) || 1.2;
+
+    let bmr = 10 * waga + 6.25 * wzrost - 5 * wiek;
+    bmr = plec === 'k' ? bmr - 161 : bmr + 5;
+
+    const tdee = Math.round(bmr * aktywnosc);
+    const redukcja = Math.round(tdee - 500);
+    const masa = Math.round(tdee + 300);
+
+    document.getElementById('calc-tdee').innerHTML = tdee.toLocaleString('pl-PL') + ' <span>kcal / dzień</span>';
+    document.getElementById('calc-redukcja').textContent = redukcja.toLocaleString('pl-PL');
+    document.getElementById('calc-masa').textContent = masa.toLocaleString('pl-PL');
+  }
+
+  ['calc-plec','calc-wiek','calc-waga','calc-wzrost','calc-aktywnosc'].forEach(id => {
+    document.getElementById(id).addEventListener('input', calcTDEE);
+    document.getElementById(id).addEventListener('change', calcTDEE);
+  });
+  calcTDEE();
+</script>
+
+</body>
+</html>
